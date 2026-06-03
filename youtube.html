@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   <head>
     <title>YouTube.com</title>
 
@@ -13,27 +14,30 @@
         font-family: Roboto, Arial, sans-serif;
       }
 
+      .video-info-grid{
+        display: grid;
+        grid-template-columns: 50px 1fr;
+      } 
+  
+      .main{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+        margin-left: 16px;
+      }
 
-      .video-card{
-        display: inline-block;
+      .video-card, .video-card2, .video-card3, .video-card4{
         width: auto;
-        block-size: 282px;
+        outline: springgreen solid 1px;
         margin-right: 6px;
         margin-bottom: 0px;
         padding: 4px, 4px, 4px, 4px;
         vertical-align: top;
-        background-color: rgb(17, 123, 141);
       }
 
-      .video-card2{
-        display: inline-block;
-        block-size: 282px;
-        margin-right: 6px;
-        margin-bottom: 0px;
-        padding: 4px 4px 4px 4px;
-        vertical-align: top;
-        background-color: rgb(219, 85, 219);
-      }
+
+
+
 
       .thumbnail{
         width: 300px;
@@ -57,6 +61,7 @@
         box-shadow: inset 0px 1px 2px rgb(238, 238, 238);
       }
 
+
       .channel-profile-pics{
         width: 36px;
         border-radius: 50%;
@@ -65,12 +70,23 @@
       }
 
       .channel-profile-pics-container{
-        display: inline-block;
         width: 50px;
         height: auto;
         vertical-align: top;
-        background-color: lightgreen;
-        
+      }
+
+      .video-info{
+        width: 240px;
+      }   
+      
+      
+
+
+      .channel-profile-pics2{
+        width: 36px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 8px;
       }
 
       .channel-profile-pics-container2{
@@ -78,20 +94,13 @@
         width: 50px;
         height: auto;
         vertical-align: top;
-        background-color: rgb(211, 238, 144);
-        
       }      
       
-      .video-info{
-        display: inline-block;
-        width: 240px;
-        background-color: lightskyblue;
-      }
 
       .video-info2{
         display: inline-block;
         width: 240px;
-        background-color: lightskyblue;
+        vertical-align: top;
       }      
 
       .video-title{
@@ -130,23 +139,27 @@
   </head>
 
   <body>
-    <div class="middle-section">
+      <div class="middle-section">
         <input class="search-bar" type="text" placeholder="Search">
-        <button class="search-button tooltip-container">
-          <img src="icons/search.svg"
-            width="24px" height="19px">
-        </button>            
-    </div>
-
-    <div class="video-card">
-
-      <div>
-        <img class="thumbnail" src="thumbnails/thumbnail-1.webp">  
+        <button class="search-button-tooltip-container">
+          <img src="icons/search.svg" width="24px" height="19px">
+        </button>
+      
+        <button class="voice-search tooltip-container">
+          <img src="icons/voice-search-icon.svg" width="24px" height="19px">
+        </button>
       </div>
-      <div>
-        <div class="channel-profile-pics-container">
-          <img class="channel-profile-pics" src="thumbnails/channel-1.jpeg">
+
+    <main class="main">  
+      <div class="video-card">
+      
+        <div>
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
         </div>
+        <div class="video-info-grid">
+          <div class="channel-profile-pics-container">
+            <img class="channel-profile-pics" src="thumbnails/channel-1.jpeg">
+          </div>
           <div class="video-info">
             <p class="video-title">
               Talking Tech and AI with Google CEO Sundar Pichai!
@@ -154,24 +167,22 @@
             <p class="author">
               Marques Brownlee
             </p>
-
+      
             <p class="video-stats">
               3.4M views &#183; 6 months ago
-            </p>            
+            </p>
           </div>
+        </div>
       </div>
-    </div>
-
-
-    <div class="video-card2">
-      <div>
-        <img class="thumbnail" src="thumbnails/thumbnail-2.webp">  
-      </div>
-      <div>
-        <div>
-          <div class="channel-profile-pics-container2">
-            <img class="channel-profile-pics" src="thumbnails/channel-2.jpeg">
       
+      <div class="video-card">
+      
+        <div>
+          <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+        </div>
+        <div class="video-info-grid2">
+          <div class="channel-profile-pics-container2">
+            <img class="channel-profile-pics2" src="thumbnails/channel-2.jpeg">
           </div>
           <div class="video-info2">
             <p class="video-title">
@@ -180,12 +191,66 @@
             <p class="author">
               Markiplier
             </p>
+      
             <p class="video-stats">
               19M views · 4 years ago
-            </p>    
+            </p>
           </div>
-        </div>     
-    </div>    
+        </div>
+      </div>
+      
+      <div class="video-card3">
+      
+        <div>
+          <img class="thumbnail" src="thumbnails/thumbnail-3.webp">
+        </div>
+        <div>
+          <div class="channel-profile-pics-container">
+            <img class="channel-profile-pics" src="thumbnails/channel-3.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Crazy Tik Toks Taken Moments Before DISASTER
+            </p>
+            <p class="author">
+              SSSniperWolf
+            </p>
+      
+            <p class="video-stats">
+              12M views · 1 year ago
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-card4">
+      
+        <div>
+          <img class="thumbnail" src="thumbnails/thumbnail-4.webp">
+        </div>
+        <div>
+          <div class="channel-profile-pics-container">
+            <img class="channel-profile-pics" src="thumbnails/channel-4.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              The Simplest Math Problem No One Can Solve - Collatz Conjecture
+            </p>
+            <p class="author">
+              Veritasium
+            </p>
+      
+            <p class="video-stats">
+              18M views · 4 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    
+    
+    
 
   </body>
 
